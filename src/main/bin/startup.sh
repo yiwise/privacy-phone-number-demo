@@ -4,9 +4,9 @@
 SERVICE_NAME="privacy-phone-number-demo-1.0.0-SNAPSHOT"
 JAR_NAME=$SERVICE_NAME\.jar
 PID=$SERVICE_NAME\.pid
-JAVA_MEM_OPTS=" -server -Xmx700m -Xms700m -Xmn200m -Dfile.encoding=UTF-8 -Dsun.jnu.encoding=UTF-8 -XX:PermSize=256m -XX:+DisableExplicitGC -XX:+UseConcMarkSweepGC -XX:+CMSParallelRemarkEnabled -XX:+UseCMSCompactAtFullCollection -XX:LargePageSizeInBytes=128m -XX:+UseFastAccessorMethods -XX:+UseCMSInitiatingOccupancyOnly -XX:CMSInitiatingOccupancyFraction=70 -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/tmp/fs-privacy-number-demo-1.0.0-SNAPSHOT.dump -Djava.net.preferIPv4Stack=true"
+JAVA_MEM_OPTS=" -server -Xmx700m -Xms700m -Xmn200m -Dfile.encoding=UTF-8 -Dsun.jnu.encoding=UTF-8 -XX:PermSize=256m -XX:+DisableExplicitGC -XX:+UseConcMarkSweepGC -XX:+CMSParallelRemarkEnabled -XX:+UseCMSCompactAtFullCollection -XX:LargePageSizeInBytes=128m -XX:+UseFastAccessorMethods -XX:+UseCMSInitiatingOccupancyOnly -XX:CMSInitiatingOccupancyFraction=70 -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/tmp/privacy-phone-number-demo-1.0.0-SNAPSHOT.dump -Djava.net.preferIPv4Stack=true"
 DEBUG="-Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=10011"
-LOG_FILE=fs-privacy-number-demo.log
+LOG_FILE=privacy-phone-number-demo.log
 BOOT_SUCCESS_SIGN='spring boot start successful'
 STOP_SIGN='Shutdown completed'
 JAVA_OPTS="$JAVA_MEM_OPTS $DEBUG"
