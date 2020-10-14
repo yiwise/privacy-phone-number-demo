@@ -3,7 +3,9 @@
 ### 应用部署
 1. 代码编译：mvn clean package，得到打包的文件：privacy-phone-number-demo.tar.gz
 2. 将打包文件拷贝的服务器上，解压运行：
+
 启动命令：
-```bin/start.sh start```
+    ```bin/start.sh start```
+
 停止命令：
-```bin/start.sh stop```
+    ```bin/start.sh stop```
