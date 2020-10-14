@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #full service name
-SERVICE_NAME="fs-privacy-number-demo-1.0.0-SNAPSHOT"
+SERVICE_NAME="privacy-phone-number-demo-1.0.0-SNAPSHOT"
 JAR_NAME=$SERVICE_NAME\.jar
 PID=$SERVICE_NAME\.pid
 JAVA_MEM_OPTS=" -server -Xmx700m -Xms700m -Xmn200m -Dfile.encoding=UTF-8 -Dsun.jnu.encoding=UTF-8 -XX:PermSize=256m -XX:+DisableExplicitGC -XX:+UseConcMarkSweepGC -XX:+CMSParallelRemarkEnabled -XX:+UseCMSCompactAtFullCollection -XX:LargePageSizeInBytes=128m -XX:+UseFastAccessorMethods -XX:+UseCMSInitiatingOccupancyOnly -XX:CMSInitiatingOccupancyFraction=70 -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/tmp/fs-privacy-number-demo-1.0.0-SNAPSHOT.dump -Djava.net.preferIPv4Stack=true"
