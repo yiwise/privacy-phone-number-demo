@@ -28,7 +28,8 @@ public class EslOutBound {
     PhoneConvertService phoneConvertService;
 
     public void createOutboundServer() {
-        outboundServer = new SocketClient(8152,
+        int eslPort = PropertyLoader.getIntProperty("fs.esl.port");
+        outboundServer = new SocketClient(eslPort,
                 new AbstractOutboundPipelineFactory() {
                     @Override
                     protected AbstractOutboundClientHandler makeHandler() {
