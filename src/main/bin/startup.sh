@@ -35,12 +35,12 @@ function startService(){
 				        sleep 2
 				    done
 
-					tailf $SERVICE_DIR/logs/$LOG_FILE | while read oneLineLog
+					tail -f $SERVICE_DIR/logs/$LOG_FILE | while read oneLineLog
                     do
 					    echo $oneLineLog
 		                if [[ $oneLineLog =~ $BOOT_SUCCESS_SIGN ]]; then
 					        echo 'start sign match'
-					        pkill tailf
+					        pkill tail
                         fi
                     done
 					break
@@ -87,17 +87,17 @@ function stopService (){
                 break
             else
                 # 检查日志是否关闭完
-                tailf $SERVICE_DIR/logs/$LOG_FILE | while read oneLineLog
+                tail -f $SERVICE_DIR/logs/$LOG_FILE | while read oneLineLog
                 do
                     echo $oneLineLog
                     if [[ $oneLineLog =~ $STOP_SIGN ]]; then
 		                echo 'stop sign match'
-		                pkill tailf
+		                pkill tail
                     fi
                     P_ID=`ps -ef |grep java | grep  "$SERVICE_NAME" | awk '{print $2}'`
                     if [ "$P_ID" == "" ]; then
                         # ok
-                        pkill tailf
+                        pkill tail
                     fi
                 done
 
